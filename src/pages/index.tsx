@@ -31,7 +31,7 @@ const listStyles = {
 }
 const listItemStyles = {
   marginBottom: 12,
-  fontWeight: "300",
+  fontWeight: 300,
   letterSpacing: 1,
 }
 const linkStyles = {

@@ -26,31 +26,40 @@ export default () => {
       aria-label="main navigation"
     >
       <div className="container">
-        <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img src={logo} />
-          </a>
-
-          <a
-            role="button"
-            className="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" className="navbar-menu">
-          <div className="navbar-start">
-            {menu_links.map((menu_link) => (
-              <a className="navbar-item" href={`/`} key={menu_link.link_label}>
-                {menu_link.link_label}
+        <div className="columns">
+          <div className="column">
+            <div className="navbar-brand">
+              <a className="navbar-item" href="/">
+                <span className="is-sr-only">Synapse Medicine</span>
+                <img src={logo} alt="Synapse Medicine" />
               </a>
-            ))}
+
+              <a
+                role="button"
+                className="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarBasicExample"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div id="navbarBasicExample" className="navbar-menu">
+              <div className="navbar-start">
+                {menu_links.map((menu_link) => (
+                  <a
+                    className="navbar-item"
+                    href={`/`}
+                    key={menu_link.link_label}
+                  >
+                    {menu_link.link_label}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

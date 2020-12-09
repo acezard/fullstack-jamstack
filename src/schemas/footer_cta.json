@@ -1,0 +1,44 @@
+{
+  "footer_cta": {
+    "doc_name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Document name"
+      }
+    },
+    "title": {
+      "type": "Text",
+      "config": {
+        "label": "Title"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "config": {
+        "label": "Description"
+      }
+    },
+    "newsletter_link": {
+      "type": "Boolean",
+      "config": {
+        "default_value": true,
+        "label": "Newsletter link"
+      }
+    },
+    "social_links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "social_icon": {
+            "type": "Text",
+            "config": {
+              "label": "Social icon"
+            }
+          }
+        },
+        "label": "Social Links"
+      }
+    }
+  }
+}

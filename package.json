@@ -13,6 +13,7 @@
   "license": "0BSD",
   "dependencies": {
     "@mdx-js/react": "^1.6.22",
+    "bulma": "^0.9.1",
     "gatsby": "^2.26.1",
     "gatsby-plugin-google-analytics": "^2.7.0",
     "gatsby-plugin-image": "^0.3.0",
@@ -21,10 +22,11 @@
     "gatsby-plugin-sharp": "^2.10.0",
     "gatsby-plugin-sitemap": "^2.8.0",
     "gatsby-source-filesystem": "^2.7.0",
+    "gatsby-source-prismic": "^3.3.0",
     "gatsby-transformer-sharp": "^2.8.0",
-    "node-sass": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.30.0"
   }
 }

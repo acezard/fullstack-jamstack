@@ -1,0 +1,25 @@
+{
+  "Main": {
+    "doc_name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Document name"
+      }
+    },
+    "menu_links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "link_label": {
+            "type": "Text",
+            "config": {
+              "label": "Link label"
+            }
+          }
+        },
+        "label": "Menu links"
+      }
+    }
+  }
+}

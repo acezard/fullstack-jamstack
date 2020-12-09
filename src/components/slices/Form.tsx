@@ -17,7 +17,7 @@ interface IProps {
 
 export default ({ slice: { primary, slice_type, items } }: IProps) => (
   <section id={slice_type} className="has-background-light">
-    <div className="container">
+    <div className="container section">
       <div className="columns">
         <div className="column">
           <h2>{primary.title.text}</h2>

@@ -9,7 +9,7 @@ interface IProps {
 
 export default ({ slice: { slice_label, items } }: IProps) => (
   <section id={slice_label}>
-    <div className="container">
+    <div className="container section">
       <div className="columns">
         {items.map((item) => (
           <div className="column">

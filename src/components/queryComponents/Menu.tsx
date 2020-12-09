@@ -21,7 +21,7 @@ export default () => {
 
   return (
     <nav
-      className="navbar has-background-light has-text-weight-bold"
+      className="navbar has-background-light has-text-weight-bold section"
       role="navigation"
       aria-label="main navigation"
     >

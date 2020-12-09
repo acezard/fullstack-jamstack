@@ -114,7 +114,7 @@ export default () => {
   `)
 
   return (
-    <footer className="has-background-primary has-text-white">
+    <footer className="has-background-primary has-text-white section">
       <div className="container">
         <div className="columns">
           <div className="column">

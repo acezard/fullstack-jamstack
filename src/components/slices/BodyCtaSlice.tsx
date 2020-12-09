@@ -20,7 +20,7 @@ interface IProps {
 
 export default ({ slice: { primary, slice_label } }: IProps) => (
   <section id={slice_label}>
-    <div className="container">
+    <div className="container section">
       <div className="columns">
         <div className="column">
           <h1>{primary.title.text}</h1>

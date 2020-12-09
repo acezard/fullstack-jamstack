@@ -114,7 +114,7 @@ export default () => {
   `)
 
   return (
-    <footer className="has-background-primary has-text-white">
+    <footer className="has-background-primary has-text-white section">
       <div className="container">
         <div className="columns">
           <div className="column">
@@ -135,16 +135,22 @@ export default () => {
             <h3>{prismicFooterCta.data.title}</h3>
             <p>{prismicFooterCta.data.description}</p>
           </div>
+
           {prismicFooterCta.data.newsletter_link && (
             <div className="column">
-              <input type="text" placeholder="Email address" />
+              <label htmlFor="email" className="is-sr-only">
+                Email address
+              </label>
+              <input id="email" type="text" placeholder="Email address" />
             </div>
           )}
+
           <div className="column">
             {prismicFooterCta.data.social_links.map((item) => (
               <div className="column">
                 <a href="/">
-                  <img src={Icons[item.social_icon]} />
+                  <span className="is-sr-only">{item.social_icon}</span>
+                  <img src={Icons[item.social_icon]} alt={item.social_icon} />
                 </a>
               </div>
             ))}

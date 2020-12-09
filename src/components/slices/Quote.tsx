@@ -25,7 +25,7 @@ interface IProps {
 
 export default ({ slice: { primary, slice_type } }: IProps) => (
   <section id={slice_type}>
-    <div className="container">
+    <div className="container section">
       <div className="columns">
         <div className="column">
           <blockquote>

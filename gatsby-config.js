@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
+    title: 'Synapse Medicine',
+    description: 'Easy Access to Reliable Drug Information',
     siteUrl: 'https://nice-island-01456b003.azurestaticapps.net',
+    titleTemplate: '',
+    image: '',
+    twitterUsername: '',
+    lang: 'en',
   },
   plugins: [
     {

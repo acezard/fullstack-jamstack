@@ -1,35 +1,47 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://nice-island-01456b003.azurestaticapps.net'
+    siteUrl: 'https://nice-island-01456b003.azurestaticapps.net',
   },
   plugins: [
-    "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-sass`,
       options: {
-        trackingId: "G-P7STY5MN05",
+        implementation: require('sass'),
       },
     },
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        name: "images",
-        path: "./src/images/",
+        trackingId: 'G-P7STY5MN05',
       },
-      __key: "images",
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-prismic',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        repositoryName: 'synapse-assessment',
+        accessToken:
+          'MC5YOC1aOUJJQUFDTUFpQ09h.Bxt0bu-_ve-_vT_vv73vv73vv73vv70JRTkRAu-_ve-_vW03Ne-_vQLvv706FQ9y77-977-9Ku-_vQ',
+        schemas: {
+          main_menu: require('./src/schemas/main_menu.json'),
+          landing_page: require('./src/schemas/landing_page.json'),
+          footer_menu: require('./src/schemas/footer_menu.json'),
+          footer_cta: require('./src/schemas/footer_cta.json'),
+          footer_cgu: require('./src/schemas/footer_cgu.json'),
+        },
       },
-      __key: "pages",
     },
   ],
-};
+}

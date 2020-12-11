@@ -8,16 +8,14 @@ interface IProps {
 }
 
 export default ({ slice: { slice_label, items } }: IProps) => (
-  <section id={slice_label}>
-    <div className="container section">
-      <div className="columns">
+  <section id={slice_label} className="section is-hidden-mobile">
+    <div className="container">
+      <div className="level is-justify-content-space-around	">
         {items.map((item) => (
-          <div className="column">
             <img
               src={item.gallery_image.url}
-              alt={item.gallery_image.alt ?? ''}
+              alt={item.gallery_image.alt ?? ""}
             />
-          </div>
         ))}
       </div>
     </div>

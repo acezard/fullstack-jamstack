@@ -1,0 +1,25 @@
+a,
+button {
+  transition: color 0.2s linear;
+}
+
+.button:focus:not(:active),
+.button.is-focused:not(:active) {
+  box-shadow: none;
+  color: inherit;
+}
+
+button img {
+  transition: transform 0.2s linear;
+}
+
+button:hover {
+  img {
+    transform: translateX(0.5rem);
+  }
+}
+
+textarea {
+  min-height: 130px;
+  min-width: 100%;
+}

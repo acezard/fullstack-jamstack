@@ -1,10 +1,11 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import logo from '../../images/Logo Synapse White.svg'
 import fa from '../../images/fb.svg'
 import li from '../../images/in.svg'
 import yo from '../../images/youtube.svg'
 import tw from '../../images/twitter.svg'
+import CTAInput from '../atoms/CTAInput'
 
 const Icons = {
   fa,
@@ -114,54 +115,61 @@ export default () => {
   `)
 
   return (
-    <footer className="has-background-primary has-text-white section">
-      <div className="container">
+    <footer className="main-footer has-background-primary has-text-white">
+      <div className="container section">
         <div className="columns">
           <div className="column">
             <img src={logo} alt="Synapse" />
           </div>
           {prismicFooterMenu.data.nav.map((item) => (
-            <div className="column">
-              <h3>{item.primary.label.text}</h3>
+            <div className="column is-flex is-flex-direction-column">
+              <h3 className="is-size-4 mb-3 has-text-weight-bold	">
+                {item.primary.label.text}
+              </h3>
               {item.items.map((link) => (
-                <a href="/">{link.sub_nav_link_label.text}</a>
+                <a href="/" className="has-text-white mb-2">
+                  {link.sub_nav_link_label.text}
+                </a>
               ))}
             </div>
           ))}
         </div>
+      </div>
 
+      <hr />
+
+      <div className="container section">
         <div className="columns">
-          <div className="column">
-            <h3>{prismicFooterCta.data.title}</h3>
+          <div className="column level">
+            <h3 className="is-size-4 mb-3 has-text-weight-bold	">
+              {prismicFooterCta.data.title}
+            </h3>
             <p>{prismicFooterCta.data.description}</p>
           </div>
 
-          {prismicFooterCta.data.newsletter_link && (
-            <div className="column">
-              <label htmlFor="email" className="is-sr-only">
-                Email address
-              </label>
-              <input id="email" type="text" placeholder="Email address" />
-            </div>
-          )}
+          {prismicFooterCta.data.newsletter_link && <CTAInput />}
 
-          <div className="column">
+          <div className="column is-flex is-justify-content-flex-end">
             {prismicFooterCta.data.social_links.map((item) => (
-              <div className="column">
-                <a href="/">
-                  <span className="is-sr-only">{item.social_icon}</span>
-                  <img src={Icons[item.social_icon]} alt={item.social_icon} />
-                </a>
-              </div>
+              <Link to="/" className="ml-4">
+                <span className="is-sr-only">{item.social_icon}</span>
+                <img src={Icons[item.social_icon]} alt={item.social_icon} />
+              </Link>
             ))}
           </div>
         </div>
+      </div>
 
-        <div className="columns">
+      <hr />
+
+      <div className="container section">
+        <div className="columns is-size-6">
           <div className="column">© Synapse Medicine 2020</div>
-          <div className="column">
+          <div className="column is-flex is-justify-content-flex-end is-flex-wrap-wrap">
             {prismicFooterCgu.data.menu_links.map((item) => (
-              <a href="/">{item.link_label}</a>
+              <Link to="/" className="has-text-white ml-4">
+                {item.link_label}
+              </Link>
             ))}
           </div>
         </div>

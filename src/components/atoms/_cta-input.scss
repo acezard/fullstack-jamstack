@@ -1,0 +1,17 @@
+.cta-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+  input {
+    border: 0;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}

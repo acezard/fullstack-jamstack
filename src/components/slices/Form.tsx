@@ -16,17 +16,17 @@ interface IProps {
 }
 
 export default ({ slice: { primary, slice_type, items } }: IProps) => (
-  <section id={slice_type} className="has-background-light">
-    <div className="container section">
+  <section id={slice_type} className="has-background-light section">
+    <div className="container">
       <div className="columns">
-        <div className="column">
-          <h2>{primary.title.text}</h2>
+        <div className="column has-text-centered">
+          <h2 className="title is-2 is-size-3-mobile is-spaced">{primary.title.text}</h2>
 
-          <p>{primary.description.text}</p>
+          <p className="subtitle is-4">{primary.description.text}</p>
 
-          <form>
+          <form className="box column is-half is-offset-one-quarter px-6 py-5">
             {items.map((item) => (
-              <div className="field">
+              <div className="field mb-5">
                 <div className="control">
                   <label htmlFor={item.form_field} className="is-sr-only">
                     {item.form_field}
@@ -52,9 +52,11 @@ export default ({ slice: { primary, slice_type, items } }: IProps) => (
               </div>
             ))}
 
-            <div className="field is-grouped">
-              <div className="control">
-                <button className="button is-link">Submit</button>
+            <div className="field is-grouped-centered">
+              <div className="control ">
+                <button id="ctaanchor" className="button is-link has-background-dark px-5">
+                  Submit
+                </button>
               </div>
             </div>
           </form>

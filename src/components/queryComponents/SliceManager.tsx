@@ -6,6 +6,14 @@ import HeroSlice from '../slices/HeroSlice'
 import ImageGallery from '../slices/ImageGallery'
 import Quote from '../slices/Quote'
 
+const Components = {
+  hero_slice: HeroSlice,
+  image_gallery: ImageGallery,
+  body_cta_slice: BodyCtaSlice,
+  quote: Quote,
+  form: Form,
+}
+
 export default () => {
   const {
     prismicLandingPage: {
@@ -78,6 +86,7 @@ export default () => {
                 title {
                   text
                 }
+                author_job
               }
             }
             ... on PrismicLandingPageBodyForm {
@@ -100,14 +109,6 @@ export default () => {
       }
     }
   `)
-
-  const Components = {
-    hero_slice: HeroSlice,
-    image_gallery: ImageGallery,
-    body_cta_slice: BodyCtaSlice,
-    quote: Quote,
-    form: Form,
-  }
 
   return body.map((slice) =>
     typeof Components[slice.slice_type] !== 'undefined'

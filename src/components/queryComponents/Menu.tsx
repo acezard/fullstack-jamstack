@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import logo from '../../images/logo-synapse-blue.svg'
 
@@ -18,6 +18,7 @@ export default () => {
       }
     }
   `)
+  const [menuActive, toggleMenu] = useState(false)
 
   return (
     <nav
@@ -34,10 +35,11 @@ export default () => {
 
           <a
             role="button"
-            className="navbar-burger burger"
+            className={`${menuActive && 'is-active'} navbar-burger burger`}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbar"
+            onClick={() => toggleMenu(!menuActive)}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -45,7 +47,7 @@ export default () => {
           </a>
         </div>
 
-        <div id="navbar" className="navbar-menu">
+        <div id="navbar" className={`${menuActive && 'is-active'} navbar-menu`}>
           <div className="navbar-start">
             {menu_links.map((menu_link) => (
               <Link className="navbar-item" to="/" key={menu_link.link_label}>

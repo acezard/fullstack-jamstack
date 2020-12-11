@@ -1,6 +1,5 @@
 import React from 'react'
 import icon from '../../images/arrow-cta.svg'
-import './_cta-input.scss'
 
 export default () => (
   <div className="column">

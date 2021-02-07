@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Synapse Medicine',
-    description: 'Easy Access to Reliable Drug Information',
+    title: 'Gatsby Landing Page',
+    description: 'An example on how to use Gatsby with a headless CMS',
     siteUrl: 'https://nice-island-01456b003.azurestaticapps.net',
     titleTemplate: '',
     image: '',

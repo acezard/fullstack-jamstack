@@ -1,8 +1,8 @@
 {
-  "name": "synapse-assessment",
+  "name": "gatsby-landing-page",
   "version": "1.0.0",
   "private": true,
-  "description": "Synapse Assessment",
+  "description": "Gatsby landing page",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

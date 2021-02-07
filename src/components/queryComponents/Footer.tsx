@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import logo from '../../images/Logo Synapse White.svg'
 import fa from '../../images/fb.svg'
 import li from '../../images/in.svg'
 import yo from '../../images/youtube.svg'
@@ -119,7 +118,7 @@ export default () => {
       <div className="container section">
         <div className="columns">
           <div className="column">
-            <img src={logo} alt="Synapse" />
+            <img alt="" />
           </div>
           {prismicFooterMenu.data.nav.map((item) => (
             <div className="column is-flex is-flex-direction-column">
@@ -164,7 +163,7 @@ export default () => {
 
       <div className="container section">
         <div className="columns is-size-6">
-          <div className="column">© Synapse Medicine 2020</div>
+          <div className="column">© Big Corp Inc. GmbH</div>
           <div className="column is-flex is-justify-content-flex-end is-flex-wrap-wrap">
             {prismicFooterCgu.data.menu_links.map((item) => (
               <Link to="/" className="has-text-white ml-4">

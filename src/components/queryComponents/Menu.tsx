@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import logo from '../../images/logo-synapse-blue.svg'
 
 export default () => {
   const {
@@ -29,8 +28,8 @@ export default () => {
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="is-flex mr-6">
-            <span className="is-sr-only">Synapse Medicine</span>
-            <img src={logo} alt="Synapse Medicine" />
+            <span className="is-sr-only">Gatsby Landing Page</span>
+            <img alt="" />
           </Link>
 
           <a
